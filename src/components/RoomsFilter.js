@@ -13,7 +13,6 @@ class RoomsFilter extends Component {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = event.target.name;
-
     this.props.handleChange(name, value);
     this.filterRooms();
   }
@@ -64,6 +63,7 @@ class RoomsFilter extends Component {
 
   render() {
     const { type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfast, pets, rooms } = this.props;
+
     let types = this.getUnique(rooms, "type");
     types = ["all", ...types];
     types = types.map((item, index) => {
@@ -73,6 +73,7 @@ class RoomsFilter extends Component {
         </option>
       );
     });
+
     let people = this.getUnique(rooms, "capacity");
     people = people.map((item, index) => {
       return (
@@ -81,6 +82,7 @@ class RoomsFilter extends Component {
         </option>
       );
     });
+
     return (
       <section className="filter-container">
         <Title title="search rooms" />

@@ -9,4 +9,5 @@ import RoomsFilter from './RoomsFilter';
 import RoomsList from './RoomsList';
 import Room from './Room';
 import Title from './Title';
-export { Main, Navbar, Hero, Banner, Services, FeaturedRooms, RoomContainer, RoomsFilter, RoomsList, Room, Title };
+import StyledHero from './StyledHero';
+export { Main, Navbar, Hero, Banner, Services, FeaturedRooms, RoomContainer, RoomsFilter, RoomsList, Room, Title, StyledHero };

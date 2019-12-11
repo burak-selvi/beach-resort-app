@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Room } from '../components';
 
 function RoomsList(props) {
+  console.log(props.rooms);
   return (
     <section className="roomslist">
       <div className="roomslist-center">
@@ -11,7 +12,7 @@ function RoomsList(props) {
         })}
       </div>
     </section>
-  )
+  );
 }
 
 const mapStateToProps = state => ({
