@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Beach Resorts App
+
+In this project, I use redux for state management, styled-components and css for stying and general ReactJs concepts.
+
+## Available Project Link
+
+You can directly access the project with this link: [Click for the project](https://brk-slv-resorts-app.netlify.com)
+
 ## Available Scripts
 
 In the project directory, you can run:
