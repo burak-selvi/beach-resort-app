@@ -7,14 +7,16 @@ class RoomsFilter extends Component {
 
   getUnique = (items, value) => {
     return [...new Set(items.map(item => item[value]))];
-  };
+  }
 
   handleChange = event => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = event.target.name;
     this.props.handleChange(name, value);
-    this.filterRooms();
+    setTimeout(() => {
+      this.filterRooms();
+    }, 500);
   }
 
   filterRooms = () => {
@@ -145,7 +147,7 @@ class RoomsFilter extends Component {
               <input
                 type="number"
                 name="maxSize"
-                id="size"
+                id="size2"
                 value={maxSize}
                 onChange={this.handleChange}
                 className="size-input"
@@ -192,8 +194,7 @@ const mapStateToProps = state => ({
   minSize: state.minSize,
   maxSize: state.maxSize,
   breakfast: state.breakfast,
-  pets: state.pets,
-  rooms: state.rooms
+  pets: state.pets
 });
 
 const mapDispatchToProps = dispatch => ({
